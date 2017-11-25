@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ödev Dağıtım Portalı</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+
+  	<div class="page-header  text-center">
+
+		<h1 class="text-info">Ödev Dağıtım Portalı</h1>
+
+	</div>
+	
+	
+	
+	<div class="container" style="margin-top:150px;">
+		<div class="row">
+			<div class="col-md-4">
+				<h1 class="text-info">Ödev Al</h1>
+				<label>Okul Numarası</label>
+				<input type="text" id="txtNumara" class="form-control" >
+				<br>
+				<button id="btnOdevAl" class="btn btn-info">Ödev Al</button>
+				<hr>
+				<div id="uyarı"></div>
+
+			</div>
+			
+			<div class="col-md-8">
+				<table class="table table-hover" id="tbOdevler">
+					<tr class="bg-info">
+						<td>Buton</td>
+						<td>Ödev</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<input type='checkbox' value="Ürün Satış Portalı">
+						</td>
+						<td>
+							Ürün Satış Portalı
+						</td>
+						<td>
+							<button class='btn btn-danger btnSil'>Sil</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type='checkbox' value="Online Sınav Portalı">
+						</td>
+						<td>
+							Online Sınav Portalı
+						</td>
+						<td>
+							<button class='btn btn-danger btnSil'>Sil</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type='checkbox' value="Ödev Dağıtım Portalı">
+						</td>
+						<td>
+							Ödev Dağıtım Portalı
+						</td>
+						<td>
+							<button class='btn btn-danger btnSil'>Sil</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type='checkbox' value="Eğitim Portalı">
+						</td>
+						<td>
+							Eğitim Portalı
+						</td>
+						<td>
+							<button class='btn btn-danger btnSil'>Sil</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type='checkbox' value="Anket Hazırlama Portalı">
+						</td>
+						<td>
+							Anket Hazırlama Portalı
+						</td>
+						<td>
+							<button class='btn btn-danger btnSil'>Sil</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type='checkbox' value="Soru-Cevap Portalı">
+						</td>
+						<td>
+							Soru-Cevap Portalı
+						</td>
+						<td>
+							<button class='btn btn-danger btnSil'>Sil</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type='checkbox' value="Araç Kiralama Portalı">
+						</td>
+						<td>
+							Araç Kiralama Portalı
+						</td>
+						<td>
+							<button class='btn btn-danger btnSil'>Sil</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type='checkbox' value="Dosya Yönetim Portalı">
+						</td>
+						<td>
+							Dosya Yönetim Portalı
+						</td>
+						<td>
+							<button class='btn btn-danger btnSil'>Sil</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type='checkbox' value="Haber Portalı">
+						</td>
+						<td>
+							Haber Portalı
+						</td>
+						<td>
+							<button class='btn btn-danger btnSil'>Sil</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type='checkbox' value="Emlak Portalı">
+						</td>
+						<td>
+							Emlak Portalı
+						</td>
+						<td>
+							<button class='btn btn-danger btnSil'>Sil</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+  
+	
+	
+	<div class="divDetay"></div>
+
+  
+  
+	<div class="container" style="margin-top:80px;">
+		<div class="row">
+			<div class="col-md-4">
+				<button id="btnYoneticiGirisi" class="btn btn-info">Yönetici Girişi</button>
+				
+				<div id="girisForm" class="alert alert-info">
+					<h1>Yönetici Girişi</h1>
+					<label>Kullanıcı Adı</label>
+					<input type="text" class="form-control" id="txtKullaniciAdi">
+					<label>Şifre</label>
+					<input type="password" class="form-control" id="txtSifre">
+					<br>
+					<button id="btnGiris" class="btn btn-success">Giriş</button>
+					<button id="btnVazgec" class="btn btn-danger">Vazgeç</button>
+					<div id="girisUyari"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+  
+  
+	<div class="container" style="margin-top:50px;">
+  		<div class="row">
+			<div class="col-mid-8">
+				<div id="YoneticiForm" class="alert alert-info">
+					<h1>Yönetici Paneli</h1>
+					<table class="table table-hover" id="tbOdevGirisi">
+						<tr class="bg-info">
+							<td>
+								<label>Ödev</label>
+							</td>
+							<td>
+								<input type="text" class="form-control" id="txtYoneticiOdev">
+							</td>
+						</tr>
+					</table>
+					<br>
+					<button id="btnKapat" class="btn btn-danger">Kapat</button>
+					<button id="btnKaydet" class="btn btn-success">Kaydet</button>
+					
+					<table class="table table-hover" id="tbOdevGrafik">
+						<tr class="bg-info">
+							<td>
+								<label>Ödev</label>
+							</td>
+							<td>
+								<label>Öğrenci Numarası</label>
+							</td>
+							<td>
+								<label>Öğrenci Kaydı Sil</label>
+							</td>
+						</tr>
+					</table>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+ 
+  <script src="js/jquery-3.2.1.js"></script>
+  <script>
+  
+
+	$("#txtNumara").keyup(function () {
+		var kontrol = 0;
+		
+		if (this.value.match(/[^0-9]/g)){
+
+			this.value = this.value.replace(/[^0-9]/g,'');
+
+			if (kontrol == 0){
+				$("#uyarı").fadeIn(0);
+				$("#uyarı").html("Lütfen Sadece Sayı Giriniz!");
+				$("#uyarı").removeClass();
+				$("#uyarı").addClass("alert alert-danger");
+				kontrol++;
+				return false;
+			}
+		}
+		
+		else{
+			kontrol = 0;
+			$("#uyarı").fadeOut(300);
+		}
+	});
+
+	$(function () {
+		
+	  $("#YoneticiForm").hide(0);
+	  $(".btnSil").hide(0);
+
+	
+      $("#girisForm").css({
+        "width": "300px",
+        "position": "fixed",
+        "top": "-500px",
+        "left": "500px"
+
+      });
+
+      $("#btnYoneticiGirisi").click(function () {
+        $("#girisForm").animate({
+          "top": "100px",
+          "left": "500px"
+
+        }, 300);
+        return false;
+      });
+
+	  $("#btnGiris").click(function () {
+		var id = $("#txtKullaniciAdi").val();
+		var sifre = $("#txtSifre").val();
+
+
+		if(id == "admin" && sifre == "123") {
+			$("#girisUyari").fadeOut(1);
+			$("#girisForm").animate({
+				"top": "-500px",
+				"left": "500px"
+			}, 300);
+			
+			$("#YoneticiForm").fadeIn(300);
+			$(".btnSil").fadeIn(0);
+		}
+
+		else{
+			$("#girisUyari").fadeIn(1);
+			$("#girisUyari").html("Kullanıcı adi veya şifre yanlış");
+			$("#girisUyari").removeClass();
+			$("#girisUyari").addClass("alert alert-danger");
+		}
+        return false;
+      });
+	  
+      $("#btnVazgec").click(function () {
+        $("#girisForm").animate({
+          "top": "-500px",
+          "left": "500px"
+
+        }, 300);
+
+        return false;
+      });
+	  
+      $("#btnKapat").click(function () {
+        $("#YoneticiForm").hide(300);
+
+        return false;
+      });
+	  
+	  $("#btnKaydet").click(function () {
+		
+		var i = $("#txtYoneticiOdev").val();
+		$("#tbOdevler").append ("<tr><td><input type='checkbox' value='" + i + "'></td><td>" + i + "</td><td><button class='btn btn-danger btnSil'>Sil</button></td></tr>");
+	  });
+		
+	  $("#btnKapat").click(function () {
+		
+		$(".btnSil").hide(0);
+		$("#YoneticiForm").hide(0);
+	  });
+	  
+	  $("#btnOdevAl").click(function () {
+	  
+		var numara = $("#txtNumara").val();
+		var nmUzunluk = $("#txtNumara").val().length;
+        
+		if (numara == "") {
+			$("#uyarı").fadeIn(1);
+			$("#uyarı").html("Lütfen Tüm Alanları Doldurunuz!");
+			$("#uyarı").removeClass();
+			$("#uyarı").addClass("alert alert-danger");
+			return false;
+		}
+		
+		else if (nmUzunluk != 11 ) {
+			$("#uyarı").fadeIn(1);
+			$("#uyarı").html("Okul Numarası 11 Haneli Olmalıdır!");
+			$("#uyarı").removeClass();
+			$("#uyarı").addClass("alert alert-danger");
+			return false;
+		}
+		
+		else{
+			$("#uyarı").fadeOut(300);	
+		}
+		
+		$(function () {
+		
+			 var secilenler = $('#tbOdevler :checked').val();
+			 var j ;
+			 if (secilenler == j) {
+			 
+				$("#uyarı").fadeIn(1);
+				$("#uyarı").html("lütfen Ödev Seçiniz!");
+				$("#uyarı").removeClass();
+				$("#uyarı").addClass("alert alert-danger");
+				return false;
+			 }
+			 $("#tbOdevGrafik").append("<tr><td>" + secilenler + "</td><td>" + numara + "</td><td><button class='btn btn-danger btnKayitSil'>Kayıt Sil</button></td></tr>");
+			 alert ("Ödeviniz Kaydedilmiştir.");
+		});
+	  });
+	  
+      $(document).on("click", ".btnSil", function () {
+        var satir = $(this).closest("tr");
+        satir.remove();
+
+      });
+	  
+	  $(document).on("click", ".btnKayitSil", function () {
+        var satir = $(this).closest("tr");
+        satir.remove();
+
+      });
+	  
+	
+  });
+  
+  </script>
+</body>
+
+</html>
